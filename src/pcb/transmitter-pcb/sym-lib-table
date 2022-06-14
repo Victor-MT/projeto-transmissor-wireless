@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "nRF24L01+")(type "Legacy")(uri "C:/@GitV/projeto-transmissor-wireless/src/pcb/lib/nRF24L01+.lib")(options "")(descr ""))
+)
