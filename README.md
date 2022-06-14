@@ -4,7 +4,7 @@
 
 # |Sumário
 
-# |Requisito
+# |Requisitos
 
 # |Arquitetura 
 
