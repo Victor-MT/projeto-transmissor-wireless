@@ -97,4 +97,4 @@ Este projeto teve o instituto de prototipar um sistema de comunicação wireless
  - [About nRF24L01](https://howtomechatronics.com/tutorials/arduino/arduino-wireless-communication-nrf24l01-tutorial/)
  - [Library Documentation](https://nrf24.github.io/RF24/)
  - [nRF24L01 datasheet](https://www.alldatasheet.com/datasheet-pdf/pdf/1243924/ETC1/NRF24L01.html)
- - [Tipo de comunicação](https://www.canalti.com.br/redes-de-computadores/modos-de-transmissao-de-dados-simplex-half-duplex-full-duplex/)
+ - [Modos de transmissão](https://www.canalti.com.br/redes-de-computadores/modos-de-transmissao-de-dados-simplex-half-duplex-full-duplex/)
