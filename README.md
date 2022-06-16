@@ -10,6 +10,15 @@ O projeto em questão foi desenvolvido  com intuito de resolver um desafio propo
  
 Considerando todos os aspectos  do desenvolvimento de uma solução tecnológica, o projeto foi dividido em etapas como definição de requisitos, desenvolvimento de hardware, software e produto final. Todas essas fases, embora pareçam seguir uma ordem em cadeia, foram desenvolvidas de forma iterativa e isso resultou em uma solução que atende todos requisitos solicitados. 
 
+### Sumário
+- [Definição de Requisitos](https://github.com/Victor-MT/projeto-transmissor-wireless#defini%C3%A7%C3%A3o-de-requisitos)
+- [Arquitetura](https://github.com/Victor-MT/projeto-transmissor-wireless#arquitetura)
+- [Hardware](https://github.com/Victor-MT/projeto-transmissor-wireless#hardware)
+- [Firmware](https://github.com/Victor-MT/projeto-transmissor-wireless#firmware)
+- [Produto Final](https://github.com/Victor-MT/projeto-transmissor-wireless#produto-final)
+- [Conclusão](https://github.com/Victor-MT/projeto-transmissor-wireless#conclus%C3%A3o)
+- [Referências](https://github.com/Victor-MT/projeto-transmissor-wireless#refer%C3%AAncias)
+
 
 ## |Definição de Requisitos
 Os requisitos definidos pelo cliente, nesse caso, o documento de especificação do projeto, foram: 
@@ -58,7 +67,7 @@ No desenvolvimento  do firmware o principal desafio foi conseguir transportar um
 
 [Código do transmissor](https://github.com/Victor-MT/projeto-transmissor-wireless/tree/master/src/firmware/transmistter)
 [Código do Receptor](https://github.com/Victor-MT/projeto-transmissor-wireless/tree/master/src/firmware/receiver)
-## Produto Final
+## |Produto Final
 Após a confecção da placa, foi desenvolvida uma case para proteger o sistema e tornar o produto mais apresentável para o cliente final poder manusear e acoplar onde for necessário. O formato hexagonal foi escolhido por sua facilidade de encaixe em diversas posições e baixa complexidade de confecção, além de ser um formato agradável visualmente. 
 
 #### Case
