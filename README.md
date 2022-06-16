@@ -30,7 +30,7 @@ Para essa primeira versão que tem como fim uma prova de conceito (POC), a arqui
 
 
 ## |Hardware
-Baseado na premissa da disponibilidade de mercado, foi selecionado como microcontrolador o arduino nano (chip ATMega328P) e o transmissor nRF24L01 por sua alta disponibilidade e preços relativamente baixos. Segundo o próprio datasheet  do nrf24l01, ele possui um alcance de 100m em espaços abertos, sendo assim, atende ao principal requisito do projeto. 
+Baseado na premissa da disponibilidade de mercado, foi selecionado como microcontrolador o arduino nano (chip ATMega328P) e o transmissor nRF24L01 por sua alta disponibilidade e preços relativamente baixos. Segundo o próprio datasheet  do nRF24l01, ele possui um alcance de 100m em espaços abertos, sendo assim, atende ao principal requisito do projeto. 
 
 #### Arduino | NRF24 spec
 ![spec](https://github.com/Victor-MT/projeto-transmissor-wireless/blob/master/img/spec.png)
@@ -39,26 +39,30 @@ Com esses dois dispositivos escolhidos foi possível desenvolver o esquemático 
 
 #### Esquemático
 ![Eschm](https://github.com/Victor-MT/projeto-transmissor-wireless/blob/master/img/circuit_esquematico.png)
+
 Para o desenvolvimento da placa PCB foi utilizado o software KiCad.
 
 #### PCB
 ![pcb](https://github.com/Victor-MT/projeto-transmissor-wireless/blob/master/img/PCB_circuit.png)
-Formato da placa já desenvolvido para encaixar na case do protótipo. Seção 3 (link)
+
+[Formato da placa já desenvolvido para encaixar na case do protótipo.](https://github.com/Victor-MT/projeto-transmissor-wireless#produto-final)
 
 No caso acima para facilitar a configuração da placa e também deixar o protótipo aberto a futuras intervenções, foi utilizado a placa arduino nano e o módulo nRF24L01, porém durante o processo de confecção do produto real ambos podem ser substituídos por apenas o chip de cada módulo com apenas um circuito de proteção e assim diminuir ainda mais o custo do projeto.
 
 A bateria do sistema foi escolhida baseada no consumo do mesmo que foi calculado em 31.3 mA. A bateria sugerida seria uma de 9V 250mAh e com isso a autonomia do projeto seria de aproximadamente 8 horas. 
 
 ## |Firmware
-Para o desenvolvimento do firmware, por se tratar de dois dispositivos muito utilizados para prototipagem possuem diversas bibliotecas disponíveis, escolhemos utilizar a RF24, desenvolvida por TMRh20 que pode ser encontrada diretamente pelo gerenciador de bibliotecas na IDE do Arduino. 
+Para o desenvolvimento do firmware, por se tratar de dois dispositivos muito utilizados para prototipagem possuem diversas bibliotecas disponíveis, escolhemos utilizar a RF24, desenvolvida por [TMRh20](https://github.com/tmrh20/RF24/) que pode ser encontrada diretamente pelo gerenciador de bibliotecas na IDE do Arduino. 
 
 No desenvolvimento  do firmware o principal desafio foi conseguir transportar um arquivo tão grande quanto 500kB já que a limitação do nRF24L01 é de 32 bytes por mensagem. Para solucionar o problema, o algoritmo desenvolvido divide a mensagem original em pequenos pedaços de 32 bytes de tamanho e depois o firmware do receptor remonta a mensagem. 
 
+[Código do transmissor](https://github.com/Victor-MT/projeto-transmissor-wireless/tree/master/src/firmware/transmistter)
+[Código do Receptor](https://github.com/Victor-MT/projeto-transmissor-wireless/tree/master/src/firmware/receiver)
 ## Produto Final
 Após a confecção da placa, foi desenvolvida uma case para proteger o sistema e tornar o produto mais apresentável para o cliente final poder manusear e acoplar onde for necessário. O formato hexagonal foi escolhido por sua facilidade de encaixe em diversas posições e baixa complexidade de confecção, além de ser um formato agradável visualmente. 
 
 #### Case
-![case](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![case](https://github.com/Victor-MT/projeto-transmissor-wireless/blob/master/img/case_img.png)
 
 ## |Conclusão
 Após todas essas etapas, podemos concluir que todos requisitos foram cumpridos resultando em um produto de fácil confecção, acessível no mercado e de simples operação.
