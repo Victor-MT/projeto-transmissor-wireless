@@ -33,14 +33,15 @@ Os requisitos definidos pelo cliente, nesse caso, o documento de especificação
 Arduino IDE, KiCad software
 
 ## |Arquitetura
-Para essa primeira versão que tem como fim uma prova de conceito (POC), a arquitetura escolhida para esse projeto foi, basicamente, um microcontrolador conectado a um transmissor e um microcontrolador conectado a um receptor com a possibilidade de enviar as informações recebidas para outro dispositivo via serial.
+Para essa primeira versão que tem como fim uma prova de conceito (POC), a arquitetura escolhida para esse projeto foi, basicamente, um microcontrolador conectado a um transmissor e um microcontrolador conectado a um receptor com a possibilidade de enviar as informações recebidas para outro dispositivo via serial. Essa arquitetura corresponde ao tipo de comunicação simplex com um transmissor e um receptor.
+
 #### Arquitetura proposta
 
 ![Arquitetura](https://github.com/Victor-MT/projeto-transmissor-wireless/blob/master/img/arquitetura.png)
 
 
 ## |Hardware
-Baseado na premissa da disponibilidade de mercado, foi selecionado como microcontrolador o arduino nano (chip ATMega328P) e o transmissor nRF24L01 por sua alta disponibilidade e preços relativamente baixos. Segundo o próprio datasheet  do nRF24l01, ele possui um alcance de 100m em espaços abertos, sendo assim, atende ao principal requisito do projeto. 
+Baseado na premissa da disponibilidade de mercado, foi selecionado como microcontrolador o arduino nano (chip ATMega328P) e o transmissor nRF24L01 por sua alta disponibilidade e preços relativamente baixos. Segundo o próprio [datasheet](https://www.alldatasheet.com/datasheet-pdf/pdf/1243924/ETC1/NRF24L01.html) do nRF24L01, ele possui um alcance de 100m em espaços abertos, sendo assim, atende ao principal requisito do projeto. Além disso, o transceptor em questão posssui mais 1 canal para se comunicar o que permite comunicações full-duplex. 
 
 #### Arduino | NRF24 spec
 ![spec](https://github.com/Victor-MT/projeto-transmissor-wireless/blob/master/img/spec.png)
@@ -59,7 +60,7 @@ Para o desenvolvimento da placa PCB foi utilizado o software KiCad.
 
 No caso acima para facilitar a configuração da placa e também deixar o protótipo aberto a futuras intervenções, foi utilizado a placa arduino nano e o módulo nRF24L01, porém durante o processo de confecção do produto real ambos podem ser substituídos por apenas o chip de cada módulo com apenas um circuito de proteção e assim diminuir ainda mais o custo do projeto.
 
-A bateria do sistema foi escolhida baseada no consumo do mesmo que foi calculado em 31.3 mA. A bateria sugerida seria uma de 9V 250mAh e com isso a autonomia do projeto seria de aproximadamente 8 horas. 
+A bateria do sistema foi escolhida baseada no consumo do mesmo que foi calculado em 31.3 mA. A bateria sugerida seria uma de 9V 250mAh ([bateria](https://www.amazon.com.br/Bateria-Recarreg%C3%A1vel-Blister-Elgin-Baterias/dp/B0754DF568/ref=asc_df_B0754DF568/?tag=googleshopp00-20&linkCode=df0&hvadid=379726667452&hvpos=&hvnetw=g&hvrand=8347384447641540275&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9100812&hvtargid=pla-809701102940&psc=1) e [conector](https://produto.mercadolivre.com.br/MLB-2114848124-clip-para-bateria-9v-capa-de-proteco-arduino-esp-nodemcu-_JM#position=2&search_layout=grid&type=item&tracking_id=4435f918-5bed-4264-9335-1ed655bfa6df)) e com isso a autonomia do projeto seria de aproximadamente 8 horas. 
 
 ## |Firmware
 Para o desenvolvimento do firmware, por se tratar de dois dispositivos muito utilizados para prototipagem possuem diversas bibliotecas disponíveis, escolhemos utilizar a RF24, desenvolvida por [TMRh20](https://github.com/tmrh20/RF24/) que pode ser encontrada diretamente pelo gerenciador de bibliotecas na IDE do Arduino. 
@@ -69,7 +70,7 @@ No desenvolvimento  do firmware o principal desafio foi conseguir transportar um
 [Código do transmissor](https://github.com/Victor-MT/projeto-transmissor-wireless/tree/master/src/firmware/transmistter)
 [Código do Receptor](https://github.com/Victor-MT/projeto-transmissor-wireless/tree/master/src/firmware/receiver)
 ## |Produto Final
-Após a confecção da placa, foi desenvolvida uma case para proteger o sistema e tornar o produto mais apresentável para o cliente final poder manusear e acoplar onde for necessário. O formato hexagonal foi escolhido por sua facilidade de encaixe em diversas posições e baixa complexidade de confecção, além de ser um formato agradável visualmente. 
+Após a confecção da placa, foi desenvolvida uma case para proteger o sistema e tornar o produto mais apresentável para o cliente final poder manusear e acoplar onde for necessário. O formato octogonal foi escolhido por sua facilidade de encaixe em diversas posições e baixa complexidade de confecção, além de ser um formato agradável visualmente. 
 
 #### Case
 ![case](https://github.com/Victor-MT/projeto-transmissor-wireless/blob/master/img/case_img.png)
@@ -78,10 +79,11 @@ Após a confecção da placa, foi desenvolvida uma case para proteger o sistema 
 Após todas essas etapas, podemos concluir que todos requisitos foram cumpridos resultando em um produto de fácil confecção, acessível no mercado e de simples operação.
 ### Melhorias
 
-Este projeto teve o instituto de prototipar um sistema de comunicação wireless em uma semana, sendo assim, é claro que ficam pendentes diversas melhorias que poderiam ser implementadas. Deixarei aqui algumas sugestões.
+Este projeto teve o instituto de prototipar um sistema de comunicação wireless em uma semana, sendo assim, é evidente que ficam pendentes diversas melhorias que poderiam ser implementadas. Deixarei aqui algumas sugestões.
 
 #### Upgrades Futuros: 
-- Mudança de protocolo para duplex;
+- Indicador LED alertando por código de cor se a mensagem foi enviada e/ou recebida;
+- Mudança de protocolo para full-duplex;
 - Melhoria do firmware para feedback de resposta sobre a integridade da mensagem enviada pelo transmissor;
 - Interface desktop para ler e exibir informações do receptor;
 ## |Referências
@@ -89,3 +91,5 @@ Este projeto teve o instituto de prototipar um sistema de comunicação wireless
  - [Understanding Wireless Range Calculations](https://www.electronicdesign.com/technologies/communications/article/21796484/understanding-wireless-range-calculations)
  - [About nRF24L01](https://howtomechatronics.com/tutorials/arduino/arduino-wireless-communication-nrf24l01-tutorial/)
  - [Library Documentation](https://nrf24.github.io/RF24/)
+ - [nRF24L01 datasheet](https://www.alldatasheet.com/datasheet-pdf/pdf/1243924/ETC1/NRF24L01.html)
+ - [Tipo de comunicação](https://www.canalti.com.br/redes-de-computadores/modos-de-transmissao-de-dados-simplex-half-duplex-full-duplex/)
