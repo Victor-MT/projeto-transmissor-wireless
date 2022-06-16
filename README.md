@@ -76,7 +76,12 @@ Após a confecção da placa, foi desenvolvida uma case para proteger o sistema 
 ![case](https://github.com/Victor-MT/projeto-transmissor-wireless/blob/master/img/case_img.png)
 
 ## |Conclusão
-Após todas essas etapas, podemos concluir que todos requisitos foram cumpridos resultando em um produto de fácil confecção, acessível no mercado e de simples operação.
+Após todas essas etapas, podemos concluir que todos requisitos foram cumpridos resultando em um produto de fácil confecção, acessível no mercado e de simples operação. Segue abaixo o custo relativo ao projeto, sem considerar o custo para produção da PCB nem fabricação da case que deperiam do fornecedor já que seriam personalizadas.
+
+#### Custo do projeto
+![case](https://github.com/Victor-MT/projeto-transmissor-wireless/blob/master/img/Custo%20do%20Produto.png)
+[Planilha de custos](https://github.com/Victor-MT/projeto-transmissor-wireless/tree/master/src/product)
+
 ### Melhorias
 
 Este projeto teve o instituto de prototipar um sistema de comunicação wireless em uma semana, sendo assim, é evidente que ficam pendentes diversas melhorias que poderiam ser implementadas. Deixarei aqui algumas sugestões.
