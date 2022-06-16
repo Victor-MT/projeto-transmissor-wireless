@@ -30,7 +30,8 @@ Os requisitos definidos pelo cliente, nesse caso, o documento de especificação
 - Pensar na case do dispositivos (produto final) 
 
 #### Ferramentas utilizadas :
-Arduino IDE, KiCad software, Solidworks software 
+Arduino IDE, KiCad software
+
 ## |Arquitetura
 Para essa primeira versão que tem como fim uma prova de conceito (POC), a arquitetura escolhida para esse projeto foi, basicamente, um microcontrolador conectado a um transmissor e um microcontrolador conectado a um receptor com a possibilidade de enviar as informações recebidas para outro dispositivo via serial.
 #### Arquitetura proposta
