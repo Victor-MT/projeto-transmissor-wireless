@@ -58,6 +58,11 @@ Para o desenvolvimento da placa PCB foi utilizado o software KiCad.
 
 [Formato da placa já desenvolvido para encaixar na case do protótipo.](https://github.com/Victor-MT/projeto-transmissor-wireless#produto-final)
 
+#### PCB 3D
+![pcb](https://github.com/Victor-MT/projeto-transmissor-wireless/blob/master/img/pcb_3D.png)
+
+Coloquei os nomes dos dispositivos na placa 3D pois o KiCad não possui o modelo 3D dos componentes em questão, apenas as medidadas de referência. 
+
 No caso acima para facilitar a configuração da placa e também deixar o protótipo aberto a futuras intervenções, foi utilizado a placa arduino nano e o módulo nRF24L01, porém durante o processo de confecção do produto real ambos podem ser substituídos por apenas o chip de cada módulo com apenas um circuito de proteção e assim diminuir ainda mais o custo do projeto.
 
 A bateria do sistema foi escolhida baseada no consumo do mesmo que foi calculado em 31.3 mA. A bateria sugerida seria uma de 9V 250mAh ([bateria](https://www.amazon.com.br/Bateria-Recarreg%C3%A1vel-Blister-Elgin-Baterias/dp/B0754DF568/ref=asc_df_B0754DF568/?tag=googleshopp00-20&linkCode=df0&hvadid=379726667452&hvpos=&hvnetw=g&hvrand=8347384447641540275&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9100812&hvtargid=pla-809701102940&psc=1) e [conector](https://produto.mercadolivre.com.br/MLB-2114848124-clip-para-bateria-9v-capa-de-proteco-arduino-esp-nodemcu-_JM#position=2&search_layout=grid&type=item&tracking_id=4435f918-5bed-4264-9335-1ed655bfa6df)) e com isso a autonomia do projeto seria de aproximadamente 8 horas. 
