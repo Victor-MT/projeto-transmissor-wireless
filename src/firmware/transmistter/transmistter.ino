@@ -22,6 +22,7 @@ RF24 radio(7, 8); // CE pin AND  CSN pin
 const byte address[6] = "00001"; // channel address
 
 /* 500kB message to be sent */
+/*Random file character generator : https://onlinefiletools.com/generate-random-text-file  */
 const String message = "assaasaasasasasasasaasasaassaasassasaasassaassaasassaassaassasassa";
 
 /* ------------------------------- METHODS DECLARATION ------------------------ */
