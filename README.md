@@ -1,7 +1,3 @@
-
-![Logo](https://github.com/Victor-MT/projeto-transmissor-wireless/blob/master/img/Logo.png)
-
-
 # Projeto Transmissor Wireless
 
 ### Sobre o projeto
